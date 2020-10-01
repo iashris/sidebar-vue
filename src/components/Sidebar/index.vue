@@ -67,7 +67,7 @@ export default {
     Phonebook,
   },
   data: () => ({
-    phonebookMode: false,
+    phonebookMode: true,
     buttonDisabled: true,
   }),
   methods: {

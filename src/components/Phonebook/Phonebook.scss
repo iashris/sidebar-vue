@@ -4,7 +4,8 @@
   &__menu {
     position: fixed;
     right: 30px;
-    height: 80vh;
+    height: 75vh;
+    bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -40,5 +41,34 @@
   }
   &__name {
     margin-top: 30px;
+  }
+  &__search {
+    display: flex;
+    height: 36px;
+    &__icon {
+      width: 16px;
+      margin-top: 6px;
+    }
+    &__icon-container {
+      background: $light-grey;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 5px 0px 25px;
+      border-radius: 5px 0 0 5px;
+    }
+    &__input {
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      outline: 0;
+      border: 0;
+      background: $light-grey;
+      border-radius: 0 5px 5px 0;
+    }
+    &__input-container {
+      width: 100%;
+    }
   }
 }
