@@ -1,0 +1,40 @@
+@import '../../styles';
+
+.sidebar {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $overlay;
+  &__phoneTitle {
+    display: flex;
+    align-items: center;
+    &__icon {
+      margin-right: 20px;
+      cursor: pointer;
+    }
+  }
+  &__container {
+    position: fixed;
+    width: $sidebar-width;
+    background: white;
+    right: 0;
+    -webkit-box-shadow: -5px 0px 14px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: -5px 0px 14px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: -5px 0px 14px 3px rgba(0, 0, 0, 0.1);
+  }
+  &__block {
+    padding: 35px;
+  }
+  &__header {
+    font-size: 20px;
+  }
+  &__content {
+    flex: 1;
+    overflow-y: scroll;
+  }
+  &__footer {
+    color: $primary;
+  }
+}

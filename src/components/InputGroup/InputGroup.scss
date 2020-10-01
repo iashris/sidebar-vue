@@ -1,0 +1,32 @@
+@import '../../styles/';
+.inputGroup {
+  padding: 30px 0;
+  &__header {
+    &__title {
+      font-size: 18px;
+    }
+  }
+  &__fromContacts {
+    text-align: right;
+    margin-top: 6px;
+    color: $primary;
+    cursor: pointer;
+    &__icon {
+      width: 20px;
+      fill: $primary;
+      margin-right: 10px;
+    }
+  }
+  &__section {
+    padding: 30px 0;
+  }
+  &__add {
+    color: $primary;
+    margin-top: 25px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .input:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,44 @@
+@import '../../styles/';
+.phonebook {
+  position: relative;
+  &__menu {
+    position: fixed;
+    right: 30px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__element {
+      width: 30px;
+      cursor: pointer;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #eee;
+      border-radius: 50%;
+      transition: 0.05s ease-in all;
+      &:hover {
+        background: $primary;
+        color: white;
+      }
+    }
+  }
+  &__letter {
+    font-size: 28px;
+    padding-top: 30px;
+    font-weight: 700;
+
+    &__block:last-child {
+      border-bottom: 0;
+    }
+  }
+  &__email {
+    margin-bottom: 30px;
+    margin-top: 10px;
+    color: #aaa;
+  }
+  &__name {
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../styles/';
+
+.topcontacts {
+  padding-bottom: 40px;
+  &__contact {
+    display: flex;
+    margin-top: 30px;
+    overflow-x: scroll;
+    &__wrapper {
+      margin-right: 20px;
+    }
+    &__tile {
+      height: 50px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: $white;
+    }
+    &__name {
+      white-space: nowrap;
+      overflow: hidden;
+      width: 60px;
+      text-overflow: ellipsis;
+      padding-top: 10px;
+    }
+  }
+}
