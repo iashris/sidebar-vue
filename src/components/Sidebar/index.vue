@@ -15,21 +15,22 @@
           <div>Select Contact</div>
         </div>
       </div>
-      <div class="sidebar__block sidebar__content hide-scroll">
+      <Phonebook
+        v-bind:title="topContactsTitle"
+        v-bind:contacts="contacts"
+        v-if="phonebookMode"
+      />
+      <div
+        class="sidebar__block sidebar__content hide-scroll"
+        v-if="!phonebookMode"
+      >
         <TopContacts
           v-bind:title="topContactsTitle"
           v-bind:contacts="contacts"
-          v-if="!phonebookMode"
         />
         <InputGroup
           @enablePhonebook="enablePhonebook"
-          v-if="!phonebookMode"
           @enableNext="setButtonState"
-        />
-        <Phonebook
-          v-bind:title="topContactsTitle"
-          v-bind:contacts="contacts"
-          v-if="phonebookMode"
         />
       </div>
       <div
@@ -67,7 +68,7 @@ export default {
     Phonebook,
   },
   data: () => ({
-    phonebookMode: true,
+    phonebookMode: false,
     buttonDisabled: true,
   }),
   methods: {

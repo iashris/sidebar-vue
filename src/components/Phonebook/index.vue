@@ -1,5 +1,5 @@
 <template>
-  <div class="phonebook">
+  <fragment>
     <div class="phonebook__menu">
       <div
         v-for="char in filterResults(formatted)"
@@ -18,33 +18,38 @@
         <input class="phonebook__search__input" @input="registerQuery" />
       </div>
     </div>
-    <div
-      v-for="char in filterResults(formatted)"
-      v-bind:key="char.character"
-      :ref="char.character"
-      class="phonebook__section"
-    >
-      <div class="phonebook__letter">{{ char.character }}</div>
-      <div
-        v-for="person in char.records"
-        v-bind:key="person.id"
-        class="phonebook__letter__block border-bottom"
-      >
-        <div class="phonebook__name">{{ person.name }}</div>
-        <div class="phonebook__email">{{ person.email }}</div>
+    <div class="phonebook hide-scroll">
+      <div class="phonebook__body">
+        <div
+          v-for="char in filterResults(formatted)"
+          v-bind:key="char.character"
+          :ref="char.character"
+          class="phonebook__section"
+        >
+          <div class="phonebook__letter">{{ char.character }}</div>
+          <div
+            v-for="person in char.records"
+            v-bind:key="person.id"
+            class="phonebook__letter__block border-bottom"
+          >
+            <div class="phonebook__name">{{ person.name }}</div>
+            <div class="phonebook__email">{{ person.email }}</div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </fragment>
 </template>
 
 <script>
 import { dictionarize } from '../../utils';
+import { Fragment } from 'vue-fragment';
 import './Phonebook.scss';
 import Search from '../../assets/search.svg';
 export default {
   name: 'Phonebook',
   props: { title: String, contacts: Array },
-  components: { Search },
+  components: { Search, Fragment },
   data() {
     return {
       formatted: Object.assign([], this.contacts),

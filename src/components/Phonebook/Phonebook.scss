@@ -1,10 +1,15 @@
 @import '../../styles/';
 .phonebook {
   position: relative;
+  padding: 35px;
+  padding-top: 0;
+  height: 100%;
+  overflow: scroll;
   &__menu {
     position: fixed;
     right: 30px;
     height: 75vh;
+    z-index: 99;
     bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -45,6 +50,7 @@
   &__search {
     display: flex;
     height: 36px;
+    padding: 35px;
     &__icon {
       width: 16px;
       margin-top: 6px;

@@ -13,7 +13,8 @@
     "random-indian-name": "^1.0.0",
     "random-material-color": "^1.0.5",
     "sass-loader": "^10.0.2",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-fragment": "^1.5.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
